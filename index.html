@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loops and conditional Statements-1</title>
+</head>
+
+<body>
+    <h2>Array of names in reverse order</h2>
+    <p id="names"></p>
+
+    <h2>Country population less than 2000</h2>
+    <p id="countries"></p>
+
+    <script>
+        //Reverse Order
+        let academy = ['Luther', 'Diego', 'Allison', 'Klaus', 'Five'];
+
+        academy.sort();
+        academy.reverse();
+
+        document.getElementById('names').innerHTML = academy;
+
+        // Country population less than 2000
+        let countries = [
+            {
+                name: 'Philippines',
+                capital: 'Manila',
+                population: 11855975
+            },
+            {
+                name: 'Poland',
+                capital: 'Warsaw',
+                population: 1706724
+            },
+            {
+                name: 'Portugal',
+                capital: 'Lisbon',
+                population: 564657
+            },
+        ];
+
+        for (let i = 0; i < countries.length; i++) {
+            let result = countries[i];
+
+            if (result.population < 2000) {
+                document.write(`${result.capital}, ${result.name}: ${result.population} <br />`);
+            } else {
+                document.write(`${result.name}'s population is not less than 2000 <br />`);
+            }
+        };
+    </script>
+</body>
+
+</html>
